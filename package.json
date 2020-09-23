@@ -10,8 +10,8 @@
     "play": "NODE_ENV=production node dist/server/index.js",
     "test": "node test/test.js",
     "pm2:start": "NODE_ENV=production pm2 start dist/server/server.js --max-memory-restart 240M",
-    "parcel:build": "parcel build index.html --max-old-space-size --no-source-maps --public-url ./",
-    "parcel:serve": "parcel serve index.html --max-old-space-size --no-source-maps --public-url ./",
+    "parcel:build": "parcel build index.html --no-source-maps --public-url ./",
+    "parcel:serve": "parcel serve index.html --no-source-maps --public-url ./",
     "server:serve": "ts-node server/index.ts --transpileOnly"
   },
   "keywords": [],
