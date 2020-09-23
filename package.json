@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "/tank-geckos",
   "scripts": {
     "start": "npm run dev",
     "dev": "npm-run-all --parallel parcel:serve server:serve",
