@@ -1,0 +1,46 @@
+{
+  "name": "phaser3-multiplayer-example-with-geckos.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "homepage": "/tank-geckos",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "npm-run-all --parallel parcel:serve server:serve",
+    "build": "npm run parcel:build",
+    "play": "NODE_ENV=production node dist/server/index.js",
+    "test": "node test/test.js",
+    "pm2:start": "NODE_ENV=production pm2 start dist/server/server.js --max-memory-restart 240M",
+    "parcel:build": "parcel build index.html --no-source-maps --public-url ./",
+    "parcel:serve": "parcel serve index.html --no-source-maps --public-url ./",
+    "server:serve": "ts-node server/index.ts --transpileOnly"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/polyfill": "^7.10.1",
+    "@geckos.io/client": "^1.5.0",
+    "@geckos.io/phaser-on-nodejs": "^1.2.3",
+    "@geckos.io/server": "^1.5.0",
+    "axios": "^0.18.1",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "phaser": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.11.2",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^1.12.4",
+    "parcel-plugin-static-files-copy": "^2.4.3",
+    "puppeteer": "^2.1.1",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3"
+  },
+  "staticFiles": {
+    "staticPath": [
+      "client/assets"
+    ]
+  }
+}
