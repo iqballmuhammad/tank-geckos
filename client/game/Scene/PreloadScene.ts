@@ -40,8 +40,7 @@ export default class PreloadScene extends Phaser.Scene {
 
   onLoadComplete(): void {
     const channel = client({
-      port: null,
-      url: `${location.protocol}//${location.hostname}:1444/tank-geckos`,
+      port: 1444,
     });
 
     channel.onConnect((error) => {
