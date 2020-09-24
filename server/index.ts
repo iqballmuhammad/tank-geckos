@@ -14,7 +14,7 @@ const port = 1444;
 app.use(cors());
 app.use(compression());
 
-app.use('/', express.static(path.join(__dirname, '../dist')));
+app.use('/', express.static(path.join(__dirname, '../')));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../index.html'));
