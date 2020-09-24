@@ -138,7 +138,6 @@ export default class SampleScene extends Phaser.Scene {
   }
 
   spawnPlayer(players: BattleGroundPlayerList) {
-    console.log(players);
     Object.keys(players).forEach((sessionId) => {
       if (!this.tankList[sessionId]) {
         this.tankList[sessionId] = new Tank(
